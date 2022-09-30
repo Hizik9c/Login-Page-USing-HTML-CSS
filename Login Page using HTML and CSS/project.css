@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+.container1{
+    width: 50%;
+    background: linear-gradient(to right, rgba(0,0,0,.5), rgba(0,0,0,.5)), url('isak1.jpg');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+.container1 h1{
+    
+    width: 600px;
+    background-color: black;
+    color: rgb(161, 238, 8);
+    font-size: 70px;
+}
+.container2{
+  width: 50%;
+  background-color: rgb(15, 15, 15);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+    
+}
+.container2 h2{
+    width: 80%;
+    margin-top: -20px;
+    text-align: center;
+    font-size: 40px;
+    color: rgb(161, 238, 8);
+}
+.container2 .form{
+    width: 80%;
+    margin-top: 30px;
+}
+.container2 .form form{
+    width: 100%;
+   
+}
+.container2 .form form label{
+    font-size: 25px;
+      
+    
+}
+.container2 .form form input{
+     width: 90%;
+     height: 40px;
+     border: 2px solid rgb(161, 238, 8);
+     border-radius: 7px;
+     background: transparent;
+     color: rgb(161, 238, 8);
+     padding: 5px 20px;
+     font-size: 20px;
+
+}
+.form form button{
+    width: 200px;
+    padding: 12px 0;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 165px;
+    border-radius: 25px;
+    background: transparent;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border: 2px solid rgb(161, 238, 8);
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+    overflow: hidden;
+}
+.form form span{
+    background: rgb(161, 238, 8);
+    height: 100%;
+    width: 0%;
+    border-radius: 25px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span{
+    width: 100%;
+}
+.form form button:hover{
+    color: black;
+}
+.form .fg{
+    float: right;
+    margin-top: 5px;
+    text-decoration: none;
+    position: relative;
+}
+.form p{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+.form p a{
+    margin-left: 10px;
+    text-decoration: none;
+    position: relative;
+}
+.form .fg::after{
+    content: '';
+    height: 2px;
+    width: 0;
+    right: 0;
+    bottom: -2px;
+    position: absolute;
+    background: rgb(161, 238, 8);
+    transition: 0.5s;
+    
+}
+.form .fg:hover::after{
+    width: 100%;
+}
+.form p a::after{
+    content: '';
+    height: 2px;
+    width: 0%;
+    background: rgb(161, 238, 8);
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    transition: 0.5s;
+
+}
+.form p a:hover::after{
+    width: 100%;
+}
+
+@media screen and (max-width: 599px){
+    .container{
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .container1{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 500px;
+    }  
+    .container2{
+        width: 100%;
+        height: 600px;
+    }  
+    .container1 h1{
+        width: 300px;
+        font-size: 30px;
+        text-align: center;
+    }
+    .form form button{
+        margin-left: 55px;
+    }
+    .container2 h2{
+        margin-top: 0px;
+    }
+    
+    .form .fg {
+        display: block;
+        text-align: center;
+        float: none;
+    } 
+}
